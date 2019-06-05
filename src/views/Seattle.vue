@@ -2,12 +2,12 @@
     <div>
         <h2>Seattle: average temperature by month for the last ten years</h2>
 
-        <ul class="results" v-if=results && results.length > 0">
+        <ul class="results" v-if=results.length > 0">
             <li v-for="(result,index) in results" :key="index">
                High Temperature, {{result.value}}
             </li>
         </ul>
-
+<h2>past the ul</h2>
         <div v-if="errors.length > 0">
             <h2>There was an error fetching weather data.</h2>
             <ul class="errors">
