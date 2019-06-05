@@ -1,13 +1,14 @@
 <template>
     <div>
+
         <h2>Seattle: average temperature by month for the last ten years</h2>
 
-        <ul class="results" v-if="results.length > 0">
+        <ul class="results" v-if="results">
             <li v-for="(result,index) in results" :key="index">
-               High Temperature: {{result.value}}
+                Month: {{Months[(new Date(result.date)).getMonth()]}}<br/>
+                High Temperature: {{result.value}}&deg;F
             </li>
         </ul>
-<h2>past the ul</h2>
         <div v-if="errors.length > 0">
             <h2>There was an error fetching weather data.</h2>
             <ul class="errors">
@@ -27,9 +28,15 @@
         name: 'Seattle',
         data() {
             return {
-                results: null,
-                errors: [],
+              tmax: [],
+              results: null,
+              errors: [],
+              Months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
             }
+        },
+        computed:
+        {
+
         },
         created() {
             axios.get('https://www.ncdc.noaa.gov/cdo-web/api/v2/data', {
@@ -47,7 +54,9 @@
                 }
             })
                 .then(response => {
-                    this.results = response.data
+                    this.results = response.data.results
+                    // this.tmax = this.results.filter(result => results.datatype==="TMAX")
+                    // this.tmin = this.results.filter(result => result.datatype==="TMIN")
                 })
                 .catch(error => {
                     this.errors.push(error)
