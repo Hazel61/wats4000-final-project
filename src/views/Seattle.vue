@@ -38,7 +38,7 @@
             }
         },
         created() {
-            console.log('Loaded Seattle Component');
+
             axios.get('http://www.ncdc.noaa.gov/cdo-web/api/v2/data', {
                 headers: {
                     token: 'AlOCstuxmDrmZEVMyzYRHkJtzIOjDLBD',

@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 export const API = axios.create({
     baseURL: `https://www.ncdc.noaa.gov/cdo-web/api/v2/`
 })
