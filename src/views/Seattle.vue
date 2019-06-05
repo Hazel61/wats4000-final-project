@@ -4,8 +4,7 @@
 
         <ul class="results" v-if=results && results.length > 0">
             <li v-for="(result,index) in results" :key="index">
-                <p>High Temperature</p>
-                <p>{{result.value}}&deg;F</p>
+               High Temperature, {{result.value}}
             </li>
         </ul>
 
