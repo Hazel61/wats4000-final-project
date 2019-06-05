@@ -33,7 +33,7 @@
         name: 'Seattle',
         data() {
             return {
-                results: [],
+                results: null,
                 errors: [],
             }
         },
