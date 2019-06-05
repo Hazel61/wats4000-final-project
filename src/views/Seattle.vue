@@ -2,18 +2,13 @@
     <div>
         <h2>Seattle: average temperature by month for the last ten years</h2>
 
-        <ul class="cities" v-if="results && results.length > 0">
+        <ul class="results" v-if=results && results.length > 0">
             <li v-for="(result,index) in results" :key="index">
-
-                <!--<weather-summary v-bind:weatherData="city.weather"></weather-summary>-->
-                <!--<weather-conditions v-bind:conditions="city.main"></weather-conditions>-->
-                <dl>
-                    <dt>High Temperature</dt>
-                    <dd>{{ result.value }}&deg;F</dd>
-
-                </dl>
+                <p>High Temperature</p>
+                <p>{{result.value}}&deg;F</p>
             </li>
         </ul>
+
         <div v-if="errors.length > 0">
             <h2>There was an error fetching weather data.</h2>
             <ul class="errors">

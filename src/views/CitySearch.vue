@@ -11,7 +11,7 @@
             <ul class="cities" v-if="results && results.list.length > 0">
             <li v-for="(city,index) in results.list" :key="index">
                 <h2>{{ city.name }}, {{ city.sys.country }}</h2>
-                <!--<p><router-link v-bind:to="{ name: 'CurrentWeather', params: { cityId: city.id } }">View Current Weather</router-link></p>-->
+
                 <weather-summary v-bind:weatherData="city.weather"></weather-summary>
                 <weather-conditions v-bind:conditions="city.main"></weather-conditions>
             </li>
