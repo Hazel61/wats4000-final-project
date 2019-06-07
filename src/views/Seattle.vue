@@ -1,12 +1,15 @@
 <template>
     <div>
 
-        <h2>Seattle: average temperature by month for the last ten years</h2>
+        <h2>Seattle: high temperature by month in 2018</h2>
 
         <ul class="results" v-if="results">
             <li v-for="(result,index) in results" :key="index">
-                Month: {{Months[(new Date(result.date)).getMonth()]}}<br/>
-                High Temperature: {{result.value}}&deg;F
+                <p>Month: {{Months[(new Date(result.date)).getMonth()]}}</p>
+                <p></p>
+                <p>High Temperature: {{result.value}}&deg;F</p>
+                
+                // call a function that makes another api call
             </li>
         </ul>
         <div v-if="errors.length > 0">
@@ -78,6 +81,7 @@
 
     h1, h2 {
         font-weight: normal;
+        font-size: medium;
     }
 
     ul {
@@ -87,6 +91,7 @@
 
     li {
         display: inline-block;
+        background-color: lightblue;
         width: 300px;
         min-height: 300px;
         border: solid 1px #e8e8e8;
