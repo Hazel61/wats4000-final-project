@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4498e0a-fd56-40e6-b991-ad4ccb629462" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/views/BarChart.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/3293c85959d3d701f56ea138edafd84f.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/3293c85959d3d701f56ea138edafd84f.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/083ea27224ddb8aa5b3b152505847b27.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/083ea27224ddb8aa5b3b152505847b27.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/2e8a12fb3211577ae83936c15df596d9.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/2e8a12fb3211577ae83936c15df596d9.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/a3ce88a9052cd2ac263faa562169fed7.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/a3ce88a9052cd2ac263faa562169fed7.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/d3a5378ea026d2b2bda51d69584a14dd.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/d3a5378ea026d2b2bda51d69584a14dd.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/dada2d9ba8dff2ca7e4e0d272409251c.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/dada2d9ba8dff2ca7e4e0d272409251c.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WeatherConditions.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WeatherConditions.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Seattle.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Seattle.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -33,7 +34,7 @@
           <entry key="html" value="5" />
           <entry key="js" value="22" />
           <entry key="json" value="5" />
-          <entry key="vue" value="25" />
+          <entry key="vue" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -41,7 +42,7 @@
           <entry key="HTML" value="5" />
           <entry key="JSON" value="5" />
           <entry key="JavaScript" value="22" />
-          <entry key="Vue.js" value="25" />
+          <entry key="Vue.js" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -54,7 +55,7 @@
           <entry key="html" value="28" />
           <entry key="js" value="376" />
           <entry key="json" value="1" />
-          <entry key="vue" value="3510" />
+          <entry key="vue" value="3586" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -62,7 +63,7 @@
           <entry key="HTML" value="28" />
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="376" />
-          <entry key="Vue.js" value="3510" />
+          <entry key="Vue.js" value="3586" />
         </counts>
       </usages-collector>
     </session>
@@ -154,11 +155,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/Seattle.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+            <state relative-caret-position="220">
+              <caret line="51" selection-start-line="51" selection-end-line="51" />
               <folding>
                 <element signature="e#981#1007#0" expanded="true" />
               </folding>
@@ -166,11 +167,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/LineChart.vue">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/views/BarChart.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="255">
+              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -206,6 +207,7 @@
         <option value="$PROJECT_DIR$/src/components/LineChart.vue" />
         <option value="$PROJECT_DIR$/src/components/WeatherConditions.vue" />
         <option value="$PROJECT_DIR$/src/views/Seattle.vue" />
+        <option value="$PROJECT_DIR$/src/views/BarChart.vue" />
       </list>
     </option>
   </component>
@@ -319,6 +321,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -342,16 +345,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559432863761</updated>
-      <workItem from="1559432865198" duration="51427000" />
+      <workItem from="1559432865198" duration="53220000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51427000" />
+    <option name="totallyTimeSpent" value="53220000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="817" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
@@ -539,11 +541,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/Seattle.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+        <state relative-caret-position="220">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
           <folding>
             <element signature="e#981#1007#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/BarChart.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
         </state>
       </provider>
     </entry>

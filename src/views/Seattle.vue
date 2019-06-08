@@ -8,8 +8,7 @@
                 <p>Month: {{Months[(new Date(result.date)).getMonth()]}}</p>
                 <p></p>
                 <p>High Temperature: {{result.value}}&deg;F</p>
-                
-                // call a function that makes another api call
+
             </li>
         </ul>
         <div v-if="errors.length > 0">
@@ -50,6 +49,7 @@
                     stationid: "GHCND:USW00024233",
                     units: "standard",
                     datatypeid: "TMAX",
+
                     limit: 100,
                     startdate: "2018-01-01",
                     enddate: "2018-12-31",
