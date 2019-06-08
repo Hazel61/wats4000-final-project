@@ -1,13 +1,14 @@
 <template>
     <div>
 
-        <h2>Seattle: high temperature by month in 2018</h2>
+        <h2>Seattle high and low temperature by month in 2018</h2>
 
         <ul class="results" v-if="results">
-            <li v-for="(result,index) in results" :key="index">
-                <p>Month: {{Months[(new Date(result.date)).getMonth()]}}</p>
+            <li v-for="(result,index) in tmax" :key="index">
+                <p>Month: {{Months[index]}}</p>
                 <p></p>
-                <p>High Temperature: {{result.value}}&deg;F</p>
+                <p>High Temperature: {{tmax[index]}}&deg;F</p>
+                <p>Low Temperature: {{tmin[index]}}&deg;F</p>
 
             </li>
         </ul>
@@ -31,6 +32,7 @@
         data() {
             return {
               tmax: [],
+              tmin: [],
               results: null,
               errors: [],
               Months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
@@ -48,8 +50,7 @@
                 params: {
                     stationid: "GHCND:USW00024233",
                     units: "standard",
-                    datatypeid: "TMAX",
-
+                    datatypeid: "EMXT",
                     limit: 100,
                     startdate: "2018-01-01",
                     enddate: "2018-12-31",
@@ -58,8 +59,30 @@
             })
                 .then(response => {
                     this.results = response.data.results
-                    // this.tmax = this.results.filter(result => results.datatype==="TMAX")
-                    // this.tmin = this.results.filter(result => result.datatype==="TMIN")
+                    this.tmax = this.results.map(result => result.value)
+
+                })
+                .catch(error => {
+                    this.errors.push(error)
+                });
+            axios.get('https://www.ncdc.noaa.gov/cdo-web/api/v2/data', {
+                headers: {
+                    token: 'AlOCstuxmDrmZEVMyzYRHkJtzIOjDLBD',
+                },
+                params: {
+                    stationid: "GHCND:USW00024233",
+                    units: "standard",
+                    datatypeid: "EMNT",
+                    limit: 100,
+                    startdate: "2018-01-01",
+                    enddate: "2018-12-31",
+                    datasetid: "GSOM"
+                }
+            })
+                .then(response => {
+                    this.results = response.data.results
+                    this.tmin = this.results.map(result => result.value)
+
                 })
                 .catch(error => {
                     this.errors.push(error)
@@ -67,7 +90,6 @@
         },
         components: {
             'error-list': ErrorList
-
         }
     }
 </script>
@@ -92,8 +114,8 @@
     li {
         display: inline-block;
         background-color: lightblue;
-        width: 300px;
-        min-height: 300px;
+        width: 200px;
+        min-height: 200px;
         border: solid 1px #e8e8e8;
         padding: 10px;
         margin: 5px;

@@ -1,8 +1,7 @@
 <template>
     <div>
         <h2>Welcome to my Seattle temperature tracker.</h2>
-        <p>I have lived in Seattle for most of my life, and I know the city is warming up. I thought it would be interesting to dive into
-        NOAA's and Open Weather Map's API's and look at some historical data on the city. Click below to see the current  </p>
+        <p>I have lived in Seattle for most of my life, and I know the city is warming up. For my final project in Seattlle University's Wats4000 course, I thought it would be interesting to dive into NOAA's and Open Weather Map's API's and look at some historical data on the Seattley. I am using Vue and Vue-chartsjs under the hood. Click below to see the current conditions.</p>
 
             <p>
                 <button v-on:click="getCities" type="submit">Current Weather</button>
@@ -85,7 +84,8 @@
         padding: 0;
     }
 
-    li {
+    li {background-color: darkseagreen;
+
         display: inline-block;
         width: 300px;
         min-height: 300px;

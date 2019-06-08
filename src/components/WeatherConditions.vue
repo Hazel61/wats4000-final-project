@@ -4,9 +4,9 @@
        <dt>Current Temp</dt>
        <dd>{{ conditions.temp }}&deg;F</dd>
       <dt>High</dt>
-      <dd>{{ conditions.temp_min }}&deg;F</dd>
-      <dt>Low </dt>
       <dd>{{ conditions.temp_max }}&deg;F</dd>
+      <dt>Low </dt>
+      <dd>{{ conditions.temp_min }}&deg;F</dd>
       <dt>Humidity </dt>
       <dd>{{ conditions.humidity }}%</dd>
       <dt>Pressure</dt>
