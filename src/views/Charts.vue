@@ -11,7 +11,6 @@
 
 <script>
     import axios from 'axios';
-    // import ErrorList from '@/components/ErrorList';
     import LineChart from '@/components/LineChart';
 
     export default {
@@ -29,7 +28,7 @@
                         {
                             label: 'Low Temperature',
                             backgroundColor: 'blue',
-                            data: [20, 10],
+                            data: [],
                         }
                     ]
                 },
@@ -63,7 +62,7 @@
                     let highTemperatures = this.chartdata.datasets.find(dataset => dataset.label === 'High Temperature');
                     if (highTemperatures) {
                         highTemperatures.data = this.results.map(result => result.value);
-                        console.log(highTemperatures.data);
+
                     } else {
                         console.error('Could not find high temperature dataset.');
                     }
@@ -92,7 +91,7 @@
                     let lowTemperatures = this.chartdata.datasets.find(dataset => dataset.label === 'Low Temperature');
                     if (lowTemperatures) {
                         lowTemperatures.data = this.results.map(result => result.value);
-                        console.log(lowTemperatures.data);
+
                     } else {
                         console.error('Could not find high temperature dataset.');
                     }
