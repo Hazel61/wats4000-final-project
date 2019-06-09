@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2>Welcome to my Seattle temperature tracker.</h2>
-        <p>I have lived in Seattle for most of my life, and I know the city is warming up. For my final project in Seattlle University's Wats4000 course, I thought it would be interesting to dive into NOAA's and Open Weather Map's API's and look at some historical data on the Seattley. I am using Vue and Vue-chartsjs under the hood. Click below to see the current conditions.</p>
+        <p>I have lived in Seattle for most of my life, and I know the city is warming up. For my final project in Seattlle University's Wats 4000 course, I thought it would be interesting to dive into NOAA's and Open Weather Map's API's and look at some historical data on Seattle. I am using Vue and Vue-chartsjs under the hood. Click below to see the current conditions.</p>
 
             <p>
                 <button v-on:click="getCities" type="submit">Current Weather</button>
@@ -17,7 +17,7 @@
         </ul>
 
             <p>
-                <router-link v-bind:to="{name:'Seattle'}">Request High temperatures</router-link>
+                <router-link class="rlink-style" v-bind:to="{name:'Seattle'}">Example Historical Data</router-link>
             </p>
 
         <error-list v-bind:errorList="errors"></error-list>
@@ -84,8 +84,7 @@
         padding: 0;
     }
 
-    li {background-color: darkseagreen;
-
+    li {background-color: lavender;
         display: inline-block;
         width: 300px;
         min-height: 300px;
@@ -93,7 +92,9 @@
         padding: 10px;
         margin: 5px;
     }
-
+    .rlink-style {
+        color: red
+    }
     .weatherSummary {
         display: inline-block;
         width: 100px;

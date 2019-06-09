@@ -33,7 +33,7 @@ export default {
 <style scoped>
   dl {
     padding: 5px;
-    background: #e8e8e8;
+    background: white;
   }
   dt {
     float: left;

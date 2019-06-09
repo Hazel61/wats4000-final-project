@@ -4,8 +4,9 @@ import Forecast from '@/views/Forecast'
 import CitySearch from '@/views/CitySearch'
 import CurrentWeather from '@/views/CurrentWeather'
 import Seattle from '@/views/Seattle'
+import Charts from '@/views/Charts'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
@@ -28,6 +29,11 @@ export default new Router({
           path: '/Seattle',
           name: 'Seattle',
           component: Seattle
+      },
+      {
+          path: '/Charts',
+          name: 'Charts',
+          component: Charts
       }
 
   ]

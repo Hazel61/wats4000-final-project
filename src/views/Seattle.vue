@@ -19,6 +19,9 @@
             </ul>
             <error-list v-bind:errorList="errors"></error-list>
         </div>
+        <p>
+            <router-link class="rlink-style" v-bind:to="{name:'Charts'}">View charts</router-link>
+        </p>
     </div>
 </template>
 
@@ -27,21 +30,26 @@
     import ErrorList from '@/components/ErrorList';
 
 
+
     export default {
         name: 'Seattle',
         data() {
             return {
-              tmax: [],
-              tmin: [],
-              results: null,
-              errors: [],
-              Months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+                chartdata: {
+                    labels: ['High Temperature'],
+                    datasets: []
+                },
+                options: {
+
+                },
+                tmax: [],
+                tmin: [],
+                results: null,
+                errors: [],
+                Months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
             }
         },
-        computed:
-        {
 
-        },
         created() {
             axios.get('https://www.ncdc.noaa.gov/cdo-web/api/v2/data', {
                 headers: {
@@ -60,7 +68,6 @@
                 .then(response => {
                     this.results = response.data.results
                     this.tmax = this.results.map(result => result.value)
-
                 })
                 .catch(error => {
                     this.errors.push(error)
@@ -89,7 +96,8 @@
                 });
         },
         components: {
-            'error-list': ErrorList
+            'error-list': ErrorList,
+
         }
     }
 </script>
