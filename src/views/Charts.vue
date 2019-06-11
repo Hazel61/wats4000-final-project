@@ -16,6 +16,7 @@
     export default {
         name: 'Seattle',
         data() {
+
             return {
                 chartdata: {
                     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
@@ -66,6 +67,7 @@
                     } else {
                         console.error('Could not find high temperature dataset.');
                     }
+
                 })
                 .catch(error => {
                     this.errors.push(error)
